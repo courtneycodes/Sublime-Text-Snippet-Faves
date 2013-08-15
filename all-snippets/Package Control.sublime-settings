@@ -1,0 +1,22 @@
+{
+	"installed_packages":
+	[
+		"2pdf",
+		"AdvancedNewFile",
+		"DocBlockr",
+		"FileDiffs",
+		"FTPSync",
+		"HTML5",
+		"Licence Snippets",
+		"Package Control",
+		"PhpTidy",
+		"SASS Snippets",
+		"SFTP",
+		"SideBarEnhancements",
+		"SideBarGit",
+		"SublimeGit",
+		"SyncedSideBar",
+		"Wordpress",
+		"WordpressDev"
+	]
+}
