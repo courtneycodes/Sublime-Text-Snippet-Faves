@@ -1,0 +1,47 @@
+<snippet>
+	<content><![CDATA[
+
+add_action( 'init', '${1:create_my_taxonomies}' );
+
+function ${1:create_my_taxonomies}() {
+
+	\$labels = array(
+	'name'					=> _x( '${2:Name of plural Taxonomy}', 'Taxonomy general name', '${3:Domain}' ),
+	'singular_name'			=> _x( '${4:Name of singular Taxonomy}', 'Taxonomy singular name', '${3:Domain}' ),
+	'search_items'			=> __( 'Search ${2:Name of plural Taxonomy}', '${3:Domain}' ),
+	'popular_items'			=> __( 'Popular ${2:Name of plural Taxonomy}', '${3:Domain}' ),
+	'all_items'				=> __( 'All ${2:Name of plural Taxonomy}', '${3:Domain}' ),
+	'parent_item'			=> __( 'Parent ${4:Name of singular Taxonomy}', '${3:Domain}' ),
+	'parent_item_colon'		=> __( 'Parent ${4:Name of singular Taxonomy}', '${3:Domain}' ),
+	'edit_item'				=> __( 'Edit ${4:Name of singular Taxonomy}', '${3:Domain}' ),
+	'update_item'			=> __( 'Update ${4:Name of singular Taxonomy}', '${3:Domain}' ),
+	'add_new_item'			=> __( 'Add New ${4:Name of singular Taxonomy}', '${3:Domain}' ),
+	'new_item_name'			=> __( 'New ${4:Name of singular Taxonomy} Name', '${3:Domain}' ),
+	'add_or_remove_items'	=> __( 'Add or remove ${2:Name of plural Taxonomy}', '${3:Domain}' ),
+	'choose_from_most_used'	=> __( 'Choose from most used ${2:Name of plural Taxonomy}', '${3:Domain}' ),
+	'menu_name'				=> __( '${4:Name of singular Taxonomy}', '${3:Domain}' ),
+	); 	
+	
+	\$args = array(
+		'labels'			=> \$labels,
+		'public' 			=> true,
+		'show_in_nav_menus'	=> true,
+		'hierarchical'		=> true,
+		'show_tagcloud'		=> true,
+		'show_ui'			=> true,
+		'query_var'			=> true,
+		'rewrite'			=> true,
+		'query_var'			=> true,
+		'capabilities'		=> '',
+	);
+
+	register_taxonomy( '${5:taxonomy-slug}', array( 'post' ), \$args );
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>tax</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+ 
+     <!-- Optional: Description to show in the menu -->
+    <description>Register Custom Taxonomy Wordpress</description>
+</snippet>
